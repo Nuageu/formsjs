@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+</head>
+<body>
+    
+    <div id="app">
+        
+        <form method="post" id="register" target="_blank">
+            <h2>Inscription</h2>
+            <div class="form-row flex gap-10">
+                <input type="text" class="flex-1" pattern="^[a-zA-Z]{2,15}$"  name="firstname" placeholder="Your first name ...">
+                <input type="text" class="flex-1" pattern="^[a-zA-Z]{2,15}$" name="lastname" placeholder="Your last name ...">
+            </div>
+            <div class="error" id="error-firstname"></div>
+            <div class="error" id="error-lastname"></div>
+            <div class="form-row flex">
+                <input type="email" pattern="^[a-z0-9.-_]+@[a-z0-9._-]+\.[a-z]{2,6}$" class="flex-1" name="email" placeholder="Your email ...">
+            </div>
+            <div class="error" id="error-email"></div>
+            <div class="form-row flex relative">
+                <input type="password" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*&?])[A-Za-z\d@$!%*?&]{8,20}$" class="flex-1" name="password" autocomplete="on" placeholder="Your password ...">
+                <i class=" fas icon-password fa-eye fa-eye-slash absolute" ></i>
+            </div>
+            <div class="error" id="error-password"></div>
+            <div class="form-row flex relative">
+                <input type="password" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*&?])[A-Za-z\d@$!%*?&]{8,20}$" class="flex-1" name="passwordConfirm" autocomplete="on" placeholder="Confirm your password ...">
+                <i class=" fas icon-password fa-eye fa-eye-slash absolute"></i>
+            </div>
+            <div class="error" id="error-confirm-password"></div>
+            <div class="form-row flex">
+                <button class="submit flex-1" disabled>S'inscrire</button>
+            </div>
+            <div class="form-row">
+                <p class="form-info">Vous avez déjà un compte ? Si oui <a href="login.html">cliquez ici </a>pour vous connecter.</p>
+            </div>
+        </form>
+        <noscript>JavaScript n'est pas activé sur votre ordinateur. Pour une meilleur expérience veuillez l'activer dans les paramètres de votre navigateur</noscript>
+        <script src="assets/main.js"></script>
+        <script src="assets/js/listeners.js"></script>
+    </div>
+
+</body>
+</html>
